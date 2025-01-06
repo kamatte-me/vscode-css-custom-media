@@ -1,5 +1,4 @@
 import * as assert from 'node:assert';
-import path from 'node:path';
 import * as vscode from 'vscode';
 import { definitionsCache } from '../extension';
 
@@ -31,11 +30,11 @@ suite('Custom Media Query Extension Tests', function () {
         'Expected --md to be defined',
       );
       assert.strictEqual(
-        definitionsCache.get('--sm')?.[0].value,
+        definitionsCache.get('--sm')?.[0]?.value,
         '(max-width: 600px)',
       );
       assert.strictEqual(
-        definitionsCache.get('--md')?.[0].value,
+        definitionsCache.get('--md')?.[0]?.value,
         '(min-width: 601px) and (max-width: 1024px)',
       );
     });
@@ -54,7 +53,7 @@ suite('Custom Media Query Extension Tests', function () {
       'Expected diagnostics for undefined custom media query',
     );
     assert.strictEqual(
-      diagnostics[0].message,
+      diagnostics[0]?.message,
       'Undifined custom media query: --undefined-media',
     );
   });
@@ -75,7 +74,7 @@ suite('Custom Media Query Extension Tests', function () {
     assert.ok(definitions, 'Expected definitions to be non-null');
     assert.strictEqual(definitions?.length, 1, 'Expected one definition');
     assert.strictEqual(
-      definitions?.[0].uri.toString(),
+      definitions?.[0]?.uri.toString(),
       document.uri.toString(),
       'Expected definition URI to match',
     );
@@ -101,12 +100,12 @@ div {
     assert.ok(references);
     assert.strictEqual(references.length, 2);
     assert.strictEqual(
-      references?.[0].uri.toString(),
+      references?.[0]?.uri.toString(),
       document.uri.toString(),
       'Expected reference URI to match',
     );
     assert.strictEqual(
-      references?.[1].uri.toString(),
+      references?.[1]?.uri.toString(),
       document.uri.toString(),
       'Expected reference URI to match',
     );

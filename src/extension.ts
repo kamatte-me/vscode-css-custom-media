@@ -149,11 +149,13 @@ const scanDocument = async (document: vscode.TextDocument) => {
   await updateDiagnostics(document);
 };
 
-export function activate(context: vscode.ExtensionContext): void {
+export async function activate(
+  context: vscode.ExtensionContext,
+): Promise<void> {
   diagnosticCollection =
     vscode.languages.createDiagnosticCollection('customMedia');
 
-  void scanWorkspace();
+  await scanWorkspace();
 
   vscode.workspace.onDidOpenTextDocument((document) => {
     void scanDocument(document);
