@@ -1,5 +1,5 @@
 {
-  "name": "vscode-css-custom-media",
+  "name": "css-custom-media",
   "displayName": "CSS Custom Media Query Support",
   "publisher": "kamatte-me",
   "author": "kamatte-me",
@@ -15,14 +15,15 @@
   "type": "commonjs",
   "main": "./out/extension.js",
   "scripts": {
-    "compile": "tsc -p ./",
+    "compile": "tsc",
     "lint": "biome check .",
     "lint:fix": "biome check --fix .",
     "lint:ci": "biome ci .",
     "test": "npm run compile && vscode-test",
     "typecheck": "tsc --noEmit",
     "vscode:prepublish": "npm run compile",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch",
+    "release": "node scripts/tag-extension.mjs && npx vsce publish"
   },
   "contributes": {
     "css": {
@@ -42,6 +43,7 @@
   ],
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@changesets/cli": "2.27.11",
     "@types/mocha": "10.0.10",
     "@types/node": "22.10.5",
     "@types/vscode": "1.96.0",

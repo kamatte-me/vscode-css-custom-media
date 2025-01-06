@@ -16,6 +16,9 @@ export const parseDefinitions = (
   let match: RegExpExecArray | null;
   // biome-ignore lint: no-constant-condition
   while ((match = definitionRegex.exec(text)) !== null) {
+    if (!(match[0] && match[1] && match[2])) {
+      continue;
+    }
     const range = new vscode.Range(
       document.positionAt(match.index),
       document.positionAt(match.index + match[0].length),

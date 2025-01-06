@@ -34,7 +34,7 @@ suite('parsers', () => {
       const definitions = parseDefinitions(document);
       assert.strictEqual(definitions.length, 2);
 
-      assert.strictEqual(definitions[0].name, '--sm');
+      assert.strictEqual(definitions[0]?.name, '--sm');
       assert.strictEqual(definitions[0].value, '(max-width: 600px)');
       assert.strictEqual(
         definitions[0].location.uri.toString(),
@@ -43,7 +43,7 @@ suite('parsers', () => {
       assert.strictEqual(definitions[0].location.range.start.line, 4);
       assert.strictEqual(definitions[0].location.range.start.character, 0);
 
-      assert.strictEqual(definitions[1].name, '--md');
+      assert.strictEqual(definitions[1]?.name, '--md');
       assert.strictEqual(
         definitions[1].value,
         '(min-width: 601px) and (max-width: 1024px)',
@@ -67,7 +67,7 @@ suite('parsers', () => {
       const references = parseReferences(document);
       assert.strictEqual(references.length, 6);
 
-      assert.strictEqual(references[0].name, '--sm');
+      assert.strictEqual(references[0]?.name, '--sm');
       assert.strictEqual(
         references[0].location.uri.toString(),
         document.uri.toString(),
@@ -75,7 +75,7 @@ suite('parsers', () => {
       assert.strictEqual(references[0].location.range.start.line, 8);
       assert.strictEqual(references[0].location.range.start.character, 10);
 
-      assert.strictEqual(references[1].name, '--primary-color');
+      assert.strictEqual(references[1]?.name, '--primary-color');
       assert.strictEqual(
         references[1].location.uri.toString(),
         document.uri.toString(),
@@ -83,7 +83,7 @@ suite('parsers', () => {
       assert.strictEqual(references[1].location.range.start.line, 12);
       assert.strictEqual(references[1].location.range.start.character, 13);
 
-      assert.strictEqual(references[2].name, '--sm');
+      assert.strictEqual(references[2]?.name, '--sm');
       assert.strictEqual(
         references[2].location.uri.toString(),
         document.uri.toString(),
@@ -91,7 +91,7 @@ suite('parsers', () => {
       assert.strictEqual(references[2].location.range.start.line, 14);
       assert.strictEqual(references[2].location.range.start.character, 11);
 
-      assert.strictEqual(references[3].name, '--md');
+      assert.strictEqual(references[3]?.name, '--md');
       assert.strictEqual(
         references[3].location.uri.toString(),
         document.uri.toString(),
@@ -99,7 +99,7 @@ suite('parsers', () => {
       assert.strictEqual(references[3].location.range.start.line, 15);
       assert.strictEqual(references[3].location.range.start.character, 12);
 
-      assert.strictEqual(references[4].name, '--lg');
+      assert.strictEqual(references[4]?.name, '--lg');
       assert.strictEqual(
         references[4].location.uri.toString(),
         document.uri.toString(),
@@ -107,7 +107,7 @@ suite('parsers', () => {
       assert.strictEqual(references[4].location.range.start.line, 15);
       assert.strictEqual(references[4].location.range.start.character, 23);
 
-      assert.strictEqual(references[5].name, '--undefined-media');
+      assert.strictEqual(references[5]?.name, '--undefined-media');
       assert.strictEqual(
         references[5].location.uri.toString(),
         document.uri.toString(),
