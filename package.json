@@ -23,6 +23,7 @@
     "typecheck": "tsc --noEmit",
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch",
+    "version": "npx changeset version && npm run lint:fix",
     "release": "node scripts/tag-extension.mjs && npx vsce publish"
   },
   "contributes": {
