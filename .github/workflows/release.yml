@@ -30,6 +30,7 @@ jobs:
       - run: npm ci
       - uses: changesets/action@v1
         with:
+          version: npx changeset version && npm run lint:fix
           publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
