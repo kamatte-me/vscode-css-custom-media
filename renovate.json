@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:js-app", "schedule:daily"],
+  "timezone": "Asia/Tokyo",
+  "prHourlyLimit": 0,
+  "labels": ["dependencies"],
+  "separateMajorMinor": true,
+  "automerge": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "matchPackageNames": ["node"],
+      "extends": ["schedule:monthly"],
+      "minimumReleaseAge": "3 days"
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
+}
