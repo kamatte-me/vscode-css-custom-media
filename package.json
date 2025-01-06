@@ -1,0 +1,57 @@
+{
+  "name": "vscode-css-custom-media",
+  "displayName": "CSS Custom Media Query Support",
+  "publisher": "kamatte-me",
+  "author": "kamatte-me",
+  "version": "0.0.1",
+  "description": "VSCode Extension - CSS Custom Media Query Support",
+  "categories": ["Other"],
+  "homepage": "https://github.com/kamatte-me/vscode-css-custom-media#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamatte-me/vscode-css-custom-media.git"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "lint": "biome check .",
+    "lint:fix": "biome check --fix .",
+    "lint:ci": "biome ci .",
+    "test": "npm run compile && vscode-test",
+    "typecheck": "tsc --noEmit",
+    "vscode:prepublish": "npm run compile",
+    "watch": "tsc -watch -p ./"
+  },
+  "contributes": {
+    "css": {
+      "customData": ["./css-data.json"]
+    },
+    "postcss": {
+      "customData": ["./css-data.json"]
+    },
+    "scss": {
+      "customData": ["./css-data.json"]
+    }
+  },
+  "activationEvents": [
+    "onLanguage:css",
+    "onLanguage:postcss",
+    "onLanguage:scss"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/mocha": "10.0.10",
+    "@types/node": "22.10.5",
+    "@types/vscode": "1.96.0",
+    "@typescript-eslint/eslint-plugin": "8.19.0",
+    "@typescript-eslint/parser": "8.19.0",
+    "@vscode/test-cli": "0.0.10",
+    "@vscode/test-electron": "2.4.1",
+    "typescript": "5.7.2"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  }
+}

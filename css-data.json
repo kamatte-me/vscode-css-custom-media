@@ -1,0 +1,25 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@custom-media",
+      "browsers": [],
+      "status": "experimental",
+      "description": "Media Queries Level 5 (W3C Working Draft) - Custom Media Query",
+      "references": [
+        {
+          "name": "W3C Working Draft",
+          "url": "https://www.w3.org/TR/mediaqueries-5/#custom-mq"
+        },
+        {
+          "name": "PostCSS Custom Media Plugin Docs",
+          "url": "https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media#readme"
+        },
+        {
+          "name": "Lightning CSS Docs",
+          "url": "https://lightningcss.dev/transpilation.html#custom-media-queries"
+        }
+      ]
+    }
+  ]
+}

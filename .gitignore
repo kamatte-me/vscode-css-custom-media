@@ -1,0 +1,23 @@
+# Misc
+.DS_Store
+*.pem
+
+# IDE
+*.code-workspace
+.idea
+
+# Node.js
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# Build
+out/
+
+# VSCode
+.vscode-test/
+*.vsix
+
+# debug
+npm-debug.log*
