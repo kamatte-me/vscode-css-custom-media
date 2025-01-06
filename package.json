@@ -9,7 +9,7 @@
   "homepage": "https://github.com/kamatte-me/vscode-css-custom-media#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kamatte-me/vscode-css-custom-media.git"
+    "url": "https://github.com/kamatte-me/vscode-css-custom-media.git"
   },
   "license": "MIT",
   "type": "commonjs",
