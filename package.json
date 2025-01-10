@@ -3,7 +3,7 @@
   "displayName": "CSS Custom Media Query Support",
   "publisher": "kamatte-me",
   "author": "kamatte-me",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "VSCode Extension - CSS Custom Media Query Support",
   "categories": ["Other"],
   "homepage": "https://github.com/kamatte-me/vscode-css-custom-media#readme",
