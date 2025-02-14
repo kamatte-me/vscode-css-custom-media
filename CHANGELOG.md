@@ -1,5 +1,11 @@
 # css-custom-media
 
+## 0.0.4
+
+### Patch Changes
+
+- [#29](https://github.com/kamatte-me/vscode-css-custom-media/pull/29) [`26e2334`](https://github.com/kamatte-me/vscode-css-custom-media/commit/26e23346d387872ca95e277973155a753a0223e5) Thanks [@kamatte-me](https://github.com/kamatte-me)! - chore: Removed unnecessary files from the bundle
+
 ## 0.0.3
 
 ### Patch Changes
