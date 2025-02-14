@@ -5,7 +5,7 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const pkg = require('../package.json');
 
-const tag = pkg.version;
+const tag = `v${pkg.version}`;
 
 const { status, stdout, error } = spawnSync('git', [
   'ls-remote',
@@ -16,7 +16,6 @@ const { status, stdout, error } = spawnSync('git', [
 assert.equal(status, 0, error);
 
 const exists = String(stdout).trim() !== '';
-
 if (!exists) {
   console.log(`\nNew tag: ${tag}`);
 }

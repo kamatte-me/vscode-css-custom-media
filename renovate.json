@@ -15,6 +15,10 @@
       "matchPackageNames": ["node"],
       "extends": ["schedule:monthly"],
       "minimumReleaseAge": "3 days"
+    },
+    {
+      "matchPackageNames": ["@types/vscode"],
+      "enabled": false
     }
   ],
   "lockFileMaintenance": {
