@@ -25,7 +25,7 @@
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch",
     "version": "npx changeset version && npm run lint:fix",
-    "release": "node scripts/tag-extension.mjs && npx vsce publish"
+    "release": "node scripts/tag-extension.mjs && vsce publish --skip-duplicate"
   },
   "contributes": {
     "css": {
@@ -49,9 +49,10 @@
     "@changesets/cli": "2.27.12",
     "@types/mocha": "10.0.10",
     "@types/node": "22.13.1",
-    "@types/vscode": "1.97.0",
+    "@types/vscode": "1.96.0",
     "@vscode/test-cli": "0.0.10",
     "@vscode/test-electron": "2.4.1",
+    "@vscode/vsce": "3.2.2",
     "typescript": "5.7.3"
   },
   "engines": {
