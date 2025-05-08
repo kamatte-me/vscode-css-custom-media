@@ -48,7 +48,7 @@
     "@changesets/changelog-github": "0.5.1",
     "@changesets/cli": "2.29.3",
     "@types/mocha": "10.0.10",
-    "@types/node": "22.15.13",
+    "@types/node": "22.15.17",
     "@types/vscode": "1.96.0",
     "@vscode/test-cli": "0.0.10",
     "@vscode/test-electron": "2.5.2",
