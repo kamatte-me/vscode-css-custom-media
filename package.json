@@ -50,7 +50,7 @@
     "@types/mocha": "10.0.10",
     "@types/node": "22.15.29",
     "@types/vscode": "1.96.0",
-    "@vscode/test-cli": "0.0.10",
+    "@vscode/test-cli": "0.0.11",
     "@vscode/test-electron": "2.5.2",
     "@vscode/vsce": "3.4.2",
     "typescript": "5.8.3"
