@@ -5,14 +5,21 @@
   "author": "kamatte-me",
   "version": "0.0.4",
   "description": "VSCode Extension - CSS Custom Media Query Support",
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
   "homepage": "https://github.com/kamatte-me/vscode-css-custom-media#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/kamatte-me/vscode-css-custom-media.git"
   },
   "license": "MIT",
-  "keywords": ["css", "scss", "postcss", "lightning css"],
+  "keywords": [
+    "css",
+    "scss",
+    "postcss",
+    "lightning css"
+  ],
   "type": "commonjs",
   "main": "./out/extension.js",
   "scripts": {
@@ -29,13 +36,19 @@
   },
   "contributes": {
     "css": {
-      "customData": ["./css-data.json"]
+      "customData": [
+        "./css-data.json"
+      ]
     },
     "postcss": {
-      "customData": ["./css-data.json"]
+      "customData": [
+        "./css-data.json"
+      ]
     },
     "scss": {
-      "customData": ["./css-data.json"]
+      "customData": [
+        "./css-data.json"
+      ]
     }
   },
   "activationEvents": [
