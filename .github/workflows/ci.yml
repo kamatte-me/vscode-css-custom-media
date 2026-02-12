@@ -24,7 +24,7 @@ jobs:
         run: |
           echo "vscode_version=`curl --silent https://update.code.visualstudio.com/api/releases/stable | jq -r '.[0]'`" >> "$GITHUB_OUTPUT"
       - name: Cache VSCode
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .vscode-test
           key: vscode-test-cache-${{ steps.code-stable.outputs.vscode_version }}
